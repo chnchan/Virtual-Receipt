@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "VT323";
+
+  display: grid;
+  grid-template-columns: 1fr 1000px 1fr;
+  grid-template-rows: 650px 70px auto 500px;
+  grid-template-areas:
+  "heading heading heading"
+  ". label ."
+  ". entries ."
+  ". total .";
+}
+
+h1 {
+  font-size: 100px;
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+input[type=text] {
+}
+
+/* grid items */
+.heading {
+  grid-area: heading;
+  justify-self: center;
+  text-align: center;
+}
+
+.label {
+  grid-area: label;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "L1 L2 L3 .";
+}
+
+.entries {
+  grid-area: entries;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 10px;
+}
+
+.total {
+  grid-area: total;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20px auto 20px;
+  grid-template-areas:
+  ". . divider"
+  ". . sumTotal"
+  ". . divider2";
+}
+
+/* .label grid items */
+.L1 {
+  grid-area: L1;
+}
+.L2 {
+  grid-area: L2;
+}
+.L3 {
+  grid-area: L3;
+}
+
+
+/* .entries grid items */
+.description {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.price {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.quantity {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.checkbox {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.description input[type=text] {
+  width: 90%;
+}
+.price input[type=text] {
+  width: 50%;
+}
+.quantity input[type=text] {
+  width: 50%;
+}
+
+/* .total grid items */
+.total h2 {
+  grid-area: sumTotal;
+  justify-self: start;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.total .divider {
+  grid-area: divider;
+  font-size: 40px;
+}
