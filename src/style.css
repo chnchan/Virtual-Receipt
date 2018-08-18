@@ -5,30 +5,48 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 1000px 1fr;
-  grid-template-rows: 650px 70px auto 500px;
+  grid-template-rows: 680px 70px auto 100px 40px auto;
   grid-template-areas:
   "heading heading heading"
   ". label ."
   ". entries ."
-  ". total .";
+  ". total ."
+  "divider2 divider2 divider2"
+  "footer footer footer";
 }
 
 h1 {
   font-size: 100px;
-  margin-top: 200px;
+  margin-top: 220px;
   margin-bottom: 150px;
 }
 
 h2 {
   font-size: 40px;
+  display: inline;
 }
 
 h3 {
   font-size: 30px;
 }
 
-input[type=text] {
+.lineHeight70 {
+  line-height: 70px;
 }
+
+/* editables */
+.editable {
+  cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+#pInput {
+  width: 13%;
+}
+
 
 /* grid items */
 .heading {
@@ -51,20 +69,37 @@ input[type=text] {
 
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto;
   grid-row-gap: 10px;
+
 }
 
 .total {
   grid-area: total;
+  justify-self: right;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 20px auto 20px;
+  grid-template-columns: 1fr 1fr 5fr 1fr;
+  grid-template-rows: 30px 50px auto;
   grid-template-areas:
-  ". . divider"
-  ". . sumTotal"
-  ". . divider2";
+  ". . . ."
+  ". . divider ."
+  ". . sumTotal .";
+}
+
+.divider2{
+  grid-area: divider2;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr 200px 200px 200px 200px 1fr;
+  grid-template-areas:
+  ". A B C D .";
 }
 
 /* .label grid items */
@@ -100,10 +135,10 @@ input[type=text] {
 .description input[type=text] {
   width: 90%;
 }
-.price input[type=text] {
+.price input[type=number] {
   width: 50%;
 }
-.quantity input[type=text] {
+.quantity input[type=number] {
   width: 50%;
 }
 
@@ -118,4 +153,18 @@ input[type=text] {
 .total .divider {
   grid-area: divider;
   font-size: 40px;
+}
+
+/* .footer grid items*/
+#A {
+  grid-area: A;
+}
+#B {
+  grid-area: B;
+}
+#C {
+  grid-area: C;
+}
+#D {
+  grid-area: D;
 }

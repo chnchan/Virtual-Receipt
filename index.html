@@ -12,10 +12,11 @@
 
   <body>
     <section class="heading">
-      <h2>____________________________________________________________</h2>
+      <h2>____________________________________________________________</h2><br />
       <h1>Virtual Receipt</h1>
-      <h2>DATE: __/__/__</h2>
-      <h2>____________________________________________________________</h2>
+      <h2 class="lineHeight70">PURPOSE: </h2><h2 id="p" target="pInput" class="editable">________</h2><input id="pInput" target="p" class="Box hide" type="text" /><br/>
+      <h2 class="lineHeight70">DATE: </h2><h2 id="d" target="dInput" class="editable">____-__-__</h2><input id="dInput" target="d" class="Box hide" type="date" /><br/>
+      <h2>____________________________________________________________</h2><br />
     </section>
 
     <section class="label">
@@ -30,15 +31,14 @@
       </div>
 
       <div class="price">
-        <input type="text" placeholder="$"/>
+        <input class="money" type="number" step="0.01" placeholder="$"/>
       </div>
 
-      <div class="quantity">
-        <input type="text" placeholder="1"/>
+      <div class="quantity" data-tip="This is the text of the tooltip2">
+        <input class="itemNum" type="number" step="1" min="1" value="1" />
       </div>
 
       <div class="checkboxes">
-        <input type="checkbox"/>
         <input type="checkbox"/>
         <input type="checkbox"/>
         <input type="checkbox"/>
@@ -48,8 +48,16 @@
 
 
     <section class="total">
-      <div class="divider">______________</div>
-      <h2>Total: 123</h2>
+      <h2 class="divider">______________</h2><br />
+      <h2 id="totalDollar">Total: $0.00</h2>
+    </section>
+
+    <h2 class="divider2">____________________________________________________________</h2><br />
+    <section class="footer">
+      <h2 id="A">A: $0.00</h2>
+      <h2 id="B">B: $0.00</h2>
+      <h2 id="C">C: $0.00</h2>
+      <h2 id="D">D: $0.00</h2>
     </section>
     <script src="src/script.js"></script>
   </body>
