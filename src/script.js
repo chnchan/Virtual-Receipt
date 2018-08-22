@@ -127,7 +127,7 @@ function calculate()
   for (var i = 0; i < individuals.length; i++)
     totalDollar += individuals[i];
 
-  document.getElementById("totalDollar").innerHTML = "Total: $" + totalDollar;
+  document.getElementById("totalDollar").innerHTML = "Total: $" + totalDollar.toFixed(2);
   document.getElementById("A").innerHTML = "A: $" + individuals[0].toFixed(2);
   document.getElementById("B").innerHTML = "B: $" + individuals[1].toFixed(2);
   document.getElementById("C").innerHTML = "C: $" + individuals[2].toFixed(2);;
