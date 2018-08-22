@@ -125,12 +125,15 @@ function calculate()
   }
 
   for (var i = 0; i < individuals.length; i++)
+  {
+    individuals[i] = Math.round(individuals[i] * 100) / 100;
     totalDollar += individuals[i];
+  }
 
-  document.getElementById("totalDollar").innerHTML = "Total: $" + totalDollar.toFixed(2);
-  document.getElementById("A").innerHTML = "A: $" + individuals[0].toFixed(2);
-  document.getElementById("B").innerHTML = "B: $" + individuals[1].toFixed(2);
-  document.getElementById("C").innerHTML = "C: $" + individuals[2].toFixed(2);;
-  document.getElementById("D").innerHTML = "D: $" + individuals[3].toFixed(2);
+  document.getElementById("totalDollar").innerHTML = "Total: $" + totalDollar;
+  document.getElementById("A").innerHTML = "A: $" + individuals[0];
+  document.getElementById("B").innerHTML = "B: $" + individuals[1];
+  document.getElementById("C").innerHTML = "C: $" + individuals[2];
+  document.getElementById("D").innerHTML = "D: $" + individuals[3];
 }
 //
